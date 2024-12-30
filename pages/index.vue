@@ -8,7 +8,7 @@
             A fully integrated suite of authentication & authorization products,
             Stytch’s platform removes the headache of.
           </p>
-          <button class="theme-btn">Download The Theme</button>
+          <button class="theme-btn">Download The Theme test</button>
         </div>
         <div class="chart">
           <img src="https://themewagon.github.io/pinwheel/images/banner-img.png" alt="Chart Image" />
