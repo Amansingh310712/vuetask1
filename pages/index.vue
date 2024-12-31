@@ -40,7 +40,6 @@
     justify-content: space-between;
     align-items: center;
     padding: 50px 20px;
-    
     color: white;
   }
   
@@ -69,12 +68,13 @@
     border-radius: 50px;
     cursor: pointer;
     height: 50px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
   }
   
   .chart img {
     max-width: 500px;
     border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+   
   }
   </style>
   
