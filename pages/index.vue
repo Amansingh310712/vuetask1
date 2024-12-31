@@ -8,7 +8,7 @@
             A fully integrated suite of authentication & authorization products,
             Stytch’s platform removes the headache of.
           </p>
-          <button class="theme-btn">Download The Theme</button>
+          <button class="theme-btn">Download The Theme test</button>
         </div>
         <div class="chart">
           <img src="https://themewagon.github.io/pinwheel/images/banner-img.png" alt="Chart Image" />
@@ -40,6 +40,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 50px 20px;
+    
     color: white;
   }
   
@@ -68,13 +69,12 @@
     border-radius: 50px;
     cursor: pointer;
     height: 50px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
   }
   
   .chart img {
     max-width: 500px;
     border-radius: 10px;
-   
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
   }
   </style>
   

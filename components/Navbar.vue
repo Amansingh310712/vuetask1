@@ -48,7 +48,7 @@
     align-items: center;
     padding: 15px 20px;
     background-color:transparent;
-   
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     position: relative; /* Ensure the image is positioned relative to the header */
   }
   
@@ -90,7 +90,6 @@
     border: none;
     border-radius: 50px;
     cursor: pointer;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
   }
   
   .nav-links {
