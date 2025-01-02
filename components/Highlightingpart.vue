@@ -254,7 +254,6 @@ const features = [
     description: "Lorem ipsum dolor sit amet consectetur, adipiscing elit.",
     iconClass: "fas fa-shield-alt",
     iconColor: "#ff6b6b",
-
   },
 ];
 
@@ -476,7 +475,6 @@ iframe {
 .content4 {
   max-width: 50%;
   padding-left: 40px;
-
 }
 
 h1 {
