@@ -117,7 +117,7 @@ const features = [
   },
   {
     title: "Family Link",
-    description: "Lorem ipsum dolor sit amet consectetur, adipiscing elit.",
+    description: "Lorem ipsum dolor sit amet consectetur, adipiscing elit!",
     iconClass: "fas fa-shield-alt",
     iconColor: "#ff6b6b",
   },
