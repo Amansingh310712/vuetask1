@@ -57,26 +57,34 @@
   /* Mobile Responsive */
   @media (max-width: 768px) {
     .side {
+      
       flex-direction: column;
       gap: 20px;
-      height: auto;
+      height: 650px;
       margin: 20px;
       padding: 20px;
-      border-radius: 20px;
+      border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 80px;
+    border-bottom-left-radius: 80px;
     }
   
     .side2 {
-      font-size: 20px;
+      font-size: 30px;
       padding-left: 20px;
       margin-right: 0;
       width: auto;
       text-align: center;
+      text-align: left;
     }
   
     .side3 {
       margin-top: 0;
       padding-right: 20px;
       text-align: center;
+      text-align: left;
+      font-size: 20px;
+      padding-left: 20px;
     }
   
     .button1 {

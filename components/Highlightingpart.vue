@@ -1,3 +1,133 @@
+<script setup>
+import { ref, computed, onMounted, onBeforeUnmount } from 'vue'
+
+const testimonials = [
+  {
+    name: 'Courtney Henry',
+    company: 'microsoft corp',
+    image: 'https://themewagon.github.io/pinwheel/images/users/user-5.png',
+    review: 'Our platform helps build secure onboarding authentica experiences & engage your users. We build .',
+    rating: 4
+  },
+  {
+    name: 'Ronald Richards',
+    company: 'meta limited',
+    image: 'https://themewagon.github.io/pinwheel/images/users/user-2.png',
+    review: 'Our platform helps build secure onboarding authentica experiences & engage your users. We build .',
+    rating: 4
+  },
+  {
+    name: 'Bessie Cooper',
+    company: 'apple inc ltd',
+    image: 'https://themewagon.github.io/pinwheel/images/users/user-6.png',
+    review: 'Our platform helps build secure onboarding authentica experiences & engage your users. We build .',
+    rating: 4
+  },
+  {
+    name: 'Bessie Cooper',
+    company: 'apple inc ltd',
+    image: 'https://themewagon.github.io/pinwheel/images/users/user-6.png',
+    review: 'Our platform helps build secure onboarding authentica experiences & engage your users. We build .',
+    rating: 4
+  }
+]
+
+const currentSlide = ref(0)
+const subtitle = ref('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi egestas Werat viverra id et aliquet. vulputate egestas sollicitudin .')
+
+const sliderStyle = computed(() => ({
+  transform: `translateX(-${currentSlide.value * 100}%)`,
+  transition: 'transform 0.5s ease-in-out'
+}))
+
+const setSlide = (index) => {
+  currentSlide.value = index
+}
+
+let autoSlideInterval
+
+const startAutoSlide = () => {
+  autoSlideInterval = setInterval(() => {
+    currentSlide.value = (currentSlide.value + 1) % testimonials.length
+  }, 5000)
+}
+
+onMounted(() => {
+  startAutoSlide()
+})
+
+onBeforeUnmount(() => {
+  clearInterval(autoSlideInterval)
+})
+
+const features = [
+  {
+    title: "Live Caption",
+    description: "Lorem ipsum dolor sit amet consectetur, adipiscing elit.",
+    iconClass: "fas fa-tv", // Replace with your icon class
+    iconColor: "#ff6b6b",
+  },
+  {
+    title: "Smart Reply",
+    description: "Lorem ipsum dolor sit amet consectetur, adipiscing elit.",
+    iconClass: "fas fa-paperclip",
+    iconColor: "#ff6b6b",
+  },
+  {
+    title: "Sound Amplifier",
+    description: "Lorem ipsum dolor sit amet consectetur, adipiscing elit.",
+    iconClass: "fas fa-bell",
+    iconColor: "#ff6b6b",
+  },
+  {
+    title: "Gesture Navigation",
+    description: "Lorem ipsum dolor sit amet consectetur, adipiscing elit.",
+    iconClass: "fas fa-mouse-pointer",
+    iconColor: "#ff6b6b",
+  },
+  {
+    title: "Dark Theme",
+    description: "Lorem ipsum dolor sit amet consectetur, adipiscing elit.",
+    iconClass: "fas fa-lightbulb",
+    iconColor: "#ff6b6b",
+  },
+  {
+    title: "Privacy Controls",
+    description: "Lorem ipsum dolor sit amet consectetur, adipiscing elit.",
+    iconClass: "fas fa-lock",
+    iconColor: "#ff6b6b",
+  },
+  {
+    title: "Location Controls",
+    description: "Lorem ipsum dolor sit amet consectetur, adipiscing elit.",
+    iconClass: "fas fa-map-marker-alt",
+    iconColor: "#ff6b6b",
+  },
+  {
+    title: "Security Updates",
+    description: "Lorem ipsum dolor sit amet consectetur, adipiscing elit.",
+    iconClass: "fas fa-shield-alt",
+    iconColor: "#ff6b6b",
+  },
+  {
+    title: "Focus Mode",
+    description: "Lorem ipsum dolor sit amet consectetur, adipiscing elit.",
+    iconClass: "fas fa-shield-alt",
+    iconColor: "#ff6b6b",
+  },
+  {
+    title: "Family Link",
+    description: "Lorem ipsum dolor sit amet consectetur, adipiscing elit.",
+    iconClass: "fas fa-shield-alt",
+    iconColor: "#ff6b6b",
+  },
+];
+
+
+
+
+</script>
+
 <template>
   <img src="https://themewagon.github.io/pinwheel/images/icons/feature-shape.svg" alt="left Decoration"
     class="left-right-image" />
@@ -139,128 +269,6 @@
 
 
 
-<script setup>
-import { ref, computed, onMounted, onBeforeUnmount } from 'vue'
-
-const testimonials = [
-  {
-    name: 'Courtney Henry',
-    company: 'microsoft corp',
-    image: 'https://themewagon.github.io/pinwheel/images/users/user-5.png',
-    review: 'Our platform helps build secure onboarding authentica experiences & engage your users. We build .',
-    rating: 4
-  },
-  {
-    name: 'Ronald Richards',
-    company: 'meta limited',
-    image: 'https://themewagon.github.io/pinwheel/images/users/user-2.png',
-    review: 'Our platform helps build secure onboarding authentica experiences & engage your users. We build .',
-    rating: 4
-  },
-  {
-    name: 'Bessie Cooper',
-    company: 'apple inc ltd',
-    image: 'https://themewagon.github.io/pinwheel/images/users/user-6.png',
-    review: 'Our platform helps build secure onboarding authentica experiences & engage your users. We build .',
-    rating: 4
-  }
-]
-
-const currentSlide = ref(0)
-const subtitle = ref('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi egestas Werat viverra id et aliquet. vulputate egestas sollicitudin .')
-
-const sliderStyle = computed(() => ({
-  transform: `translateX(-${currentSlide.value * 100}%)`,
-  transition: 'transform 0.5s ease-in-out'
-}))
-
-const setSlide = (index) => {
-  currentSlide.value = index
-}
-
-let autoSlideInterval
-
-const startAutoSlide = () => {
-  autoSlideInterval = setInterval(() => {
-    currentSlide.value = (currentSlide.value + 1) % testimonials.length
-  }, 5000)
-}
-
-onMounted(() => {
-  startAutoSlide()
-})
-
-onBeforeUnmount(() => {
-  clearInterval(autoSlideInterval)
-})
-
-const features = [
-  {
-    title: "Live Caption",
-    description: "Lorem ipsum dolor sit amet consectetur, adipiscing elit.",
-    iconClass: "fas fa-tv", // Replace with your icon class
-    iconColor: "#ff6b6b",
-  },
-  {
-    title: "Smart Reply",
-    description: "Lorem ipsum dolor sit amet consectetur, adipiscing elit.",
-    iconClass: "fas fa-paperclip",
-    iconColor: "#ff6b6b",
-  },
-  {
-    title: "Sound Amplifier",
-    description: "Lorem ipsum dolor sit amet consectetur, adipiscing elit.",
-    iconClass: "fas fa-bell",
-    iconColor: "#ff6b6b",
-  },
-  {
-    title: "Gesture Navigation",
-    description: "Lorem ipsum dolor sit amet consectetur, adipiscing elit.",
-    iconClass: "fas fa-mouse-pointer",
-    iconColor: "#ff6b6b",
-  },
-  {
-    title: "Dark Theme",
-    description: "Lorem ipsum dolor sit amet consectetur, adipiscing elit.",
-    iconClass: "fas fa-lightbulb",
-    iconColor: "#ff6b6b",
-  },
-  {
-    title: "Privacy Controls",
-    description: "Lorem ipsum dolor sit amet consectetur, adipiscing elit.",
-    iconClass: "fas fa-lock",
-    iconColor: "#ff6b6b",
-  },
-  {
-    title: "Location Controls",
-    description: "Lorem ipsum dolor sit amet consectetur, adipiscing elit.",
-    iconClass: "fas fa-map-marker-alt",
-    iconColor: "#ff6b6b",
-  },
-  {
-    title: "Security Updates",
-    description: "Lorem ipsum dolor sit amet consectetur, adipiscing elit.",
-    iconClass: "fas fa-shield-alt",
-    iconColor: "#ff6b6b",
-  },
-  {
-    title: "Focus Mode",
-    description: "Lorem ipsum dolor sit amet consectetur, adipiscing elit.",
-    iconClass: "fas fa-shield-alt",
-    iconColor: "#ff6b6b",
-  },
-  {
-    title: "Family Link",
-    description: "Lorem ipsum dolor sit amet consectetur, adipiscing elit.",
-    iconClass: "fas fa-shield-alt",
-    iconColor: "#ff6b6b",
-  },
-];
-
-
-
-
-</script>
 
 <style scoped>
 #para {
@@ -475,6 +483,7 @@ iframe {
 .content4 {
   max-width: 50%;
   padding-left: 40px;
+  padding-right: 30px;
 }
 
 h1 {
@@ -485,7 +494,7 @@ h1 {
 }
 
 p {
-  font-size: 20px;
+  font-size: 18px;
   margin-bottom: 20px;
   padding-right: 30px;
   color: grey;
@@ -510,13 +519,9 @@ p {
 .chart4 img {
   max-width: 500px;
   border-radius: 10px;
-
-
 }
 
-.chart4 {
-  padding-right: 50px;
-}
+
 
 a {
   color: #020202;
@@ -699,10 +704,13 @@ a {
 @media (max-width: 768px) {
   .iframe_style{
     height: 10rem;
-    width: auto;
+    width: 18rem;
+  margin-left: 20px;
+   
   }
   #heading {
     font-size: 28px;
+    text-align: center;
   }
   .ratings{
     flex-direction: column;
@@ -711,15 +719,11 @@ a {
   #para {
     font-size: 16px;
     margin: 0 10px;
-  }
+  text-align: center;
+}
 
   .header {
     flex-direction: column;
-    text-align: left;
-    gap: 10px;
-  }
-
-  .cards {
     grid-template-columns: 1fr;
     gap: 10px;
   }
@@ -759,13 +763,16 @@ a {
   }
 
   .chart4 {
-    height: 20rem;
+   
     width: 100%;
   }
 
-  .theme-btn2,
-  .theme-btn3 {
+  .theme-btn2{
+    margin: 10px auto;
     width: 90%;
+  }
+  .theme-btn3 {
+   
     margin: 10px auto;
   }
 }

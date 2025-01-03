@@ -1,3 +1,17 @@
+<script setup>
+import { ref } from 'vue';
+
+const isMenuOpen = ref(false);
+
+const toggleMenu = () => {
+  isMenuOpen.value = !isMenuOpen.value;
+};
+</script>
+
+
+
+
+
 <template>
   <header class="header">
     <nav class="navbar">
@@ -16,7 +30,7 @@
 
       <!-- Navigation Links -->
       <ul :class="['nav-links', isMenuOpen ? 'show' : '']">
-        <li><a href="#" class="link">Home</a></li>
+        <li class="home-nav-link"><a href="#" class="link">Home</a></li>
         <li><a href="#" class="link">About</a></li>
         <li><a href="#" class="link">Blog</a></li>
         <li><a href="#" class="link">Features</a></li>
@@ -43,15 +57,7 @@
   </header>
 </template>
 
-<script setup>
-import { ref } from 'vue';
 
-const isMenuOpen = ref(false);
-
-const toggleMenu = () => {
-  isMenuOpen.value = !isMenuOpen.value;
-};
-</script>
 
 <style scoped>
 .header {
@@ -67,13 +73,15 @@ const toggleMenu = () => {
   font-size: 24px;
   font-weight: bold;
   color: #e16d6d;
+  padding-left: 0rem;
 }
 
 .navbar {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   width: 100%;
+font-family:  sans-serif;
 }
 
 .nav-links {
@@ -102,6 +110,8 @@ const toggleMenu = () => {
   border-radius: 50px;
   cursor: pointer;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 150px;
+  height: 40px;
 }
 
 /* Hamburger Menu */
@@ -110,6 +120,7 @@ const toggleMenu = () => {
   flex-direction: column;
   gap: 5px;
   cursor: pointer;
+  padding-right: 0rem;
 }
 
 .hamburger .line {
@@ -173,6 +184,22 @@ const toggleMenu = () => {
 
   .signup-btn {
     display: none;
+  }
+
+  .home-nav-link:active{
+    position: relative;
+  }
+
+  .home-nav-link::after{
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    right: 0;
+    height: .125rem;
+    --tw-content: "",
+    content: var(--tw-content);
+    display: block;
+    background-color: red;
   }
 }
 </style>

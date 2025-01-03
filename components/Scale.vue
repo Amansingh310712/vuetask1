@@ -7,7 +7,7 @@
                 A fully integrated suite of authentication & authorization products,
                 Stytch’s platform removes the headache of.
             </p>
-            <button class="theme-btn">Download The Theme Test</button>
+            <button class="theme-btn">Download The Theme</button>
         </div>
         <div class="chart">
             <img src="https://themewagon.github.io/pinwheel/images/banner-img.png" alt="Chart Image" />
@@ -20,16 +20,14 @@
     </div>
 </template>
 
-<script>
-</script>
 
 <style scoped>
-body {
+/* body {
     font-family: "Arial", sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f9f9f9;
-}
+} */
 
 /* Hero Section Styles */
 .hero {
@@ -47,7 +45,7 @@ body {
 
 .content h1 {
     font-family: Merriweather, sans-serif;
-    font-size: 55px;
+    font-size: 50px;
     margin-bottom: 20px;
     color: black;
 }
@@ -56,6 +54,7 @@ p {
     font-size: 16px;
     margin-bottom: 20px;
     color: grey;
+    font-family:  sans-serif;
 }
 
 .theme-btn {
@@ -77,7 +76,7 @@ p {
 .top-right-image {
   position: absolute;
   top: -8rem;
-  right: -1rem;
+  right: 0rem;
   width: 400px;
   z-index: -1;
 }
@@ -97,13 +96,13 @@ p {
         text-align: left;
     }
 
-    h1 {
-        font-size: 32px;
+   .content h1 {
+        font-size: 35px;
         /* Reduce the font size for the heading */
     }
 
-    p {
-        font-size: 14px;
+   .content p {
+        font-size: 16px;
         /* Reduce the font size for the paragraph */
     }
 
@@ -115,9 +114,9 @@ p {
     }
 
     .theme-btn {
-        width: 80%;
+        width: 210px;
         /* Adjust button width for smaller screens */
-        margin: 20px auto;
+        margin: 30px auto;
         /* Center the button */
     }
 }

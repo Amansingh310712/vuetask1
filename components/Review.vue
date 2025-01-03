@@ -1,47 +1,3 @@
-<template>
-<section>
-    <div class="testimonial-section">
-    <div class="ratings">
-    <div class="rate1">
-  <h2 class="title">Our customers have nice things to say about us</h2>
-</div>
-<div class="rate2">
-<p class="subtitle">{{ subtitle }}</p>
-</div>
-</div>
-  <div class="testimonial-container">
-    <div class="testimonial-wrapper" :style="sliderStyle">
-      <div v-for="(testimonial, index) in testimonials" :key="index" class="testimonial-card">
-        <div class="profile-image">
-          <img :src="testimonial.image" :alt="testimonial.name">
-        </div>
-        <h3 class="name">{{ testimonial.name }}</h3>
-        <p class="company">{{ testimonial.company }}</p>
-        <p class="review">{{ testimonial.review }}</p>
-        <div class="rating">
-          <span v-for="star in 5" :key="star" class="star">
-            <img src="https://themewagon.github.io/pinwheel/images/icons/star.svg" alt="">
-            
-          </span>
-        </div>
-      </div>
-    </div>
-
-    <div class="dots">
-      <span 
-        v-for="(_, index) in testimonials" 
-        :key="index"
-        :class="['dot', { active: currentSlide === index }]"
-        @click="setSlide(index)"
-      ></span>
-    </div>
-  </div>
-</div>
-</section>
-</template>
-
-
-
 <script>
 import { ref, computed, onMounted, onBeforeUnmount } from 'vue'
 
@@ -97,6 +53,55 @@ onBeforeUnmount(() => {
 clearInterval(autoSlideInterval)
 })
 </script>
+
+
+
+
+
+
+
+<template>
+<section>
+    <div class="testimonial-section">
+    <div class="ratings">
+    <div class="rate1">
+  <h2 class="title">Our customers have nice things to say about us</h2>
+</div>
+<div class="rate2">
+<p class="subtitle">{{ subtitle }}</p>
+</div>
+</div>
+  <div class="testimonial-container">
+    <div class="testimonial-wrapper" :style="sliderStyle">
+      <div v-for="(testimonial, index) in testimonials" :key="index" class="testimonial-card">
+        <div class="profile-image">
+          <img :src="testimonial.image" :alt="testimonial.name">
+        </div>
+        <h3 class="name">{{ testimonial.name }}</h3>
+        <p class="company">{{ testimonial.company }}</p>
+        <p class="review">{{ testimonial.review }}</p>
+        <div class="rating">
+          <span v-for="star in 5" :key="star" class="star">
+            <img src="https://themewagon.github.io/pinwheel/images/icons/star.svg" alt="">
+            
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="dots">
+      <span 
+        v-for="(_, index) in testimonials" 
+        :key="index"
+        :class="['dot', { active: currentSlide === index }]"
+        @click="setSlide(index)"
+      ></span>
+    </div>
+  </div>
+</div>
+</section>
+</template>
+
 
 
 
