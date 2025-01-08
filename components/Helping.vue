@@ -29,7 +29,7 @@
   
   .side2 {
     margin-right: 55px;
-    font-size: 30px;
+    font-size: 40px;
     padding-left: 90px;
     color: white;
     width: 1400px;
@@ -40,6 +40,7 @@
     color: white;
     margin-top: 35px;
     padding-right: 40px;
+    font-size: 25px;
   }
   
   .button1 {
