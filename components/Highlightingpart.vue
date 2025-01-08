@@ -129,15 +129,14 @@ const features = [
 </script>
 
 <template>
-  <img src="https://themewagon.github.io/pinwheel/images/icons/feature-shape.svg" alt="left Decoration"
-    class="left-right-image" />
-  <section class="highlighting-part">
+ 
+  <!-- <section class="highlighting-part">
     <div class="container">
       <div class="header">
         <div class="text-content">
           <h2 id="heading">The Highlighting Part Of Our Solution</h2>
-        </div>
-        <div class="title">
+          </div>
+          <div class="title">
           <p id="para">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi egestas Werat viverra id et
             aliquet. vulputate egestas sollicitudin
           </p>
@@ -154,7 +153,7 @@ const features = [
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
   <section class="marvel">
     <div class="content2">
       <h1>Prevent failure from to impacting your reputation</h1>
@@ -273,15 +272,16 @@ const features = [
 <style scoped>
 #para {
   text-align: left;
-  font-size: 18px;
+  font-size: 20px;
   margin-left: 100px;
 }
 
 #heading {
   font-size: 40px;
-  margin-left: 30px;
-  margin-right: 60px;
+  /* margin-left: 30px;
+  margin-right: 60px; */
   font-family: Merriweather, sans-serif;
+  padding-right: 100px;
 }
 
 .highlighting-part {
@@ -344,13 +344,13 @@ const features = [
 }
 
 .card h3 {
-  font-size: 1.2rem;
+  font-size:25px;
   margin-bottom: 10px;
   font-weight: 600;
 }
 
 .card p {
-  font-size: 0.9rem;
+  font-size: 18px;
   color: #6c757d;
 }
 
@@ -365,20 +365,21 @@ const features = [
 }
 
 .content2 {
-  max-width: 50%;
-  padding-left: 50px;
-  padding-right: 70px;
+  max-width: 40%;
+ padding-left: 50px;
 }
 
 h1 {
   font-size: 35px;
   margin-bottom: 20px;
-
+padding-right: 60px;
   color: black;
 }
 
-p {
+.content2 p {
   color: grey;
+  font-size: 20px;
+  padding-right: 40px;
 }
 
 .theme-btn2 {
@@ -404,9 +405,9 @@ iframe {
 
 }
 
-.chart2 {
+/* .chart2 {
   padding-right: 50px;
-}
+} */
 
 a {
   color: #020202;
@@ -427,7 +428,7 @@ a {
 
 .content3 {
   max-width: 50%;
-  padding-left: 40px;
+  padding-left: 100px;
 }
 
 h1 {
@@ -438,15 +439,15 @@ h1 {
 }
 
 .content3 p {
-  font-size: 17px;
+  font-size: 20px;
   margin-bottom: 10px;
-  padding-right: 30px;
+  padding-right: 20px;
   color: grey;
 
 }
 
 iframe {
-  width: 650px;
+  width: 700px;
   height: 400px;
 }
 
@@ -464,8 +465,8 @@ iframe {
 
 .l p.line {
   color: #000000;
-  font-size: 17px;
-  line-height: 15px;
+  font-size: 20px;
+  line-height: 30px;
 }
 
 
@@ -705,7 +706,7 @@ a {
   .iframe_style{
     height: 10rem;
     width: 18rem;
-  margin-left: 20px;
+  
    
   }
   #heading {

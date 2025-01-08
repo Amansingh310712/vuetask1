@@ -27,7 +27,7 @@ const toggleMenu = () => {
         <div class="line"></div>
         <div class="line"></div>
       </div>
-
+<div class="menuu">
       <!-- Navigation Links -->
       <ul :class="['nav-links', isMenuOpen ? 'show' : '']">
         <li class="home-nav-link"><a href="#" class="link">Home</a></li>
@@ -49,6 +49,7 @@ const toggleMenu = () => {
         </li>
         <li><a href="#" class="link">Contact</a></li>
       </ul>
+    </div>
     </nav>
 
     <button class="signup-btn">Sign Up Now</button>
@@ -64,25 +65,29 @@ const toggleMenu = () => {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 20px;
+  padding: 30px 30px;
   background-color: transparent;
   position: relative;
+  height: 50px;
 }
 
 .logo {
   font-size: 24px;
   font-weight: bold;
   color: #e16d6d;
-  padding-left: 0rem;
+  padding-right: 120px;
+ padding-top: 10px;
+  padding-left: 30px;
 }
 
 .navbar {
   display: flex;
-  justify-content: space-evenly;
+  /* justify-content: space-evenly; */
   align-items: center;
   width: 100%;
 font-family:  sans-serif;
 }
+
 
 .nav-links {
   display: flex;
@@ -91,6 +96,8 @@ font-family:  sans-serif;
   text-decoration: none;
   /* margin-left: 70px; */
   color: black;
+ font-size: 17px;
+  padding-right: 0px;
 }
 
 .nav-links .link {
@@ -103,15 +110,16 @@ font-family:  sans-serif;
 }
 
 .signup-btn {
-  padding: 10px 20px;
+  /* padding: 10px 20px; */
   background-color: white;
   color: black;
   border: none;
   border-radius: 50px;
   cursor: pointer;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  width: 150px;
-  height: 40px;
+  width: 175px;
+  height: 45px;
+  font-size: 15px;
 }
 
 /* Hamburger Menu */
@@ -185,7 +193,15 @@ font-family:  sans-serif;
   .signup-btn {
     display: none;
   }
-
+.logo{
+  padding-left: 0px;
+  padding-right: 120px;
+}
+.header{
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 15px;
+}
   .home-nav-link:active{
     position: relative;
   }
